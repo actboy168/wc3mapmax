@@ -1,0 +1,274 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "Wc3MapMax++.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 119, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wc3MapMax++"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,11,20,20
+    LTEXT           "Wc3MapMax++ v1.3.8",IDC_STATIC,32,13,81,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "确定",IDOK,36,40,50,16,WS_GROUP
+    LTEXT           "By Red_Wolf",IDC_STATIC,45,23,49,8,SS_NOPREFIX
+END
+
+IDD_WC3MAPMAX_DIALOG DIALOGEX 0, 0, 322, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "Wc3MapMax++ v1.3.8"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "单位",     IDC_STATIC, 25,  25, 24, 11
+    LTEXT           "物品",     IDC_STATIC, 25,  40, 24, 11
+    LTEXT           "可破坏物", IDC_STATIC, 17,  55, 32, 11
+    LTEXT           "装饰物",   IDC_STATIC, 21,  70, 28, 11
+    LTEXT           "技能",     IDC_STATIC, 25,  85, 24, 11
+    LTEXT           "特效",     IDC_STATIC, 25, 100, 24, 11
+    LTEXT           "科技",     IDC_STATIC, 25, 115, 24, 11
+    COMBOBOX        IDC_COMBO_UNIT, 57,  22, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ITEM, 57,  37, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DEST, 57,  52, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DOOD, 57,  67, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ABIL, 57,  82, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BUFF, 57,  97, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_UPGR, 57, 112, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "搜索等级",IDC_STATIC_SEARCH_LEVEL,133,26,33,12,SS_NOTIFY
+    COMBOBOX        IDC_COMBO_SEARCH_LEVEL,168,23,23,37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "搜索.j脚本",IDC_CHECK_SEARCH_OBJECT_IN_JSCRIPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,39,58,14
+    LTEXT           "无用Obj标志",IDC_STATIC_UNUSED_OBJECT,135,56,45,9,SS_NOTIFY
+    EDITTEXT        IDC_EDIT_UNUSE_OBJECT_NAME,132,68,58,12,ES_AUTOHSCROLL
+    CONTROL         "Creep生物",IDC_CHECK_USE_RANDOM_CREEP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,94,48,12
+    CONTROL         "中立建筑",IDC_CHECK_USE_RANDOM_BUILD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,105,44,12
+    CONTROL         "随机物品",IDC_CHECK_USE_RANDOM_ITEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,116,44,12
+    CONTROL         "市场出售",IDC_CHECK_USE_MARKET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,127,44,12
+    EDITTEXT        IDC_EDIT_FILE_NAME,12,178,255,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "打开",IDC_BUTTON_OPEN,278,165,29,14
+    PUSHBUTTON      "优化",IDC_BUTTON_OPT,278,183,29,14
+    LTEXT           "",IDC_STATIC_SLK,17,7,31,11,SS_NOTIFY
+    LTEXT           "",IDC_STATIC_OBJECT,130,7,43,10,SS_NOTIFY
+    LTEXT           "",IDC_STATIC_EXTRA,207,7,40,10,SS_NOTIFY
+    LTEXT           "",IDC_STATIC_RANDOM,137,83,46,11,SS_NOTIFY
+    GROUPBOX        "SLK优化",IDC_SLK,12,8,108,141
+    GROUPBOX        "Object搜索",IDC_OBJ,125,8,72,141
+    GROUPBOX        "保留随机Obj",IDC_STATIC,132,85,58,57
+    EDITTEXT        IDC_EDIT_TXT_NULL_MARK,75,130,34,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "空字符标志",IDC_STATIC_TXT_NULL_MARK,25,133,41,12,SS_NOTIFY
+    PUSHBUTTON      "读取数据文件",IDC_BUTTON_INPUT_FILE,18,155,57,15
+    CONTROL         "Wav最佳优化",IDC_CHECK_WAV_AUTO_BLOCKSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,102,158,64,12
+    CONTROL         "仅重压缩地图",IDC_CHECK_ONLY_FOR_COMPRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,158,67,12
+    LTEXT           "",IDC_STATIC_BOTTON_TEXT,14,196,113,8
+    
+    GROUPBOX        "Extra优化",IDC_EXT,                                                         203,   8, 108, 145
+    CONTROL         "Doo优化",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                  209,  21,  50,  12
+    LTEXT           "小数精确位",IDC_STATIC_DOO_NUM,                                             217,  34,  41,  12,SS_NOTIFY
+    EDITTEXT        IDC_EDIT_DOO_CONV_DIGITS_NUM,                                                259,  32,  21,  12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "标志字符",IDC_STATIC_DOO_MARK,                                              217,  47,  35,  12,SS_NOTIFY
+    EDITTEXT        IDC_EDIT_DOO_MARK_STRING,                                                    259,  45,  45,  12,ES_AUTOHSCROLL
+    CONTROL         "WTS优化",IDC_CHECK_WTS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP, 209,  60,  45,  12
+    CONTROL         "删除WE关联文件",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,           209,  73,  84,  12
+    CONTROL         "保留listfile文件",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,         209,  86,  84,  12
+    CONTROL         "Blp优化",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                 209,  99,  40,  12
+    COMBOBOX        IDC_COMBO10,                                                                 259,  99,  38,  37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP 
+    CONTROL         "优化J文件",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,               209, 112,  50,  12
+    CONTROL         "Mdx压缩",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                 209, 125,  44,  12
+    LTEXT           "外部listfile",IDC_STATIC_EXLISTFILE,                                        209, 138,  51,  12,SS_NOTIFY
+    PUSHBUTTON      "未设置",IDC_BUTTON_LIST_FILE,                                               266, 133,  38,  14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,8,0
+ PRODUCTVERSION 1,3,8,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "魔兽地图优化工具"
+            VALUE "CompanyName", "by Red_Wolf"
+            VALUE "FileDescription", "魔兽地图优化工具"
+            VALUE "FileVersion", "1.3.8"
+            VALUE "InternalName", "Wc3MapMax++.exe"
+            VALUE "LegalCopyright", "by Red_Wolf"
+            VALUE "OriginalFilename", "Wc3MapMax++.exe"
+            VALUE "ProductName", "Wc3MapMax++"
+            VALUE "ProductVersion", "1.3.8"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+        HORZGUIDE, 27
+    END
+
+    IDD_WC3MAPMAX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WC3MAPMAX_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_SEARCH_LEVEL, 0x403, 2, 0
+0x0030, 
+    IDC_COMBO_SEARCH_LEVEL, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_SEARCH_LEVEL, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_SEARCH_LEVEL, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO10, 0x403, 5, 0
+0x696d, 0x3170, "\000" 
+    IDC_COMBO10, 0x403, 5, 0
+0x696d, 0x3270, "\000" 
+    IDC_COMBO10, 0x403, 6, 0
+0x696d, 0x3170, 0x0036, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Wc3MapMax++(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
