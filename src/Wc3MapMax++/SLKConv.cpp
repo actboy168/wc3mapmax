@@ -5321,7 +5321,8 @@ void ExWriteStr(char*& bufferPos,char* str,bool useQuote)
 	{
 		if (*src=='<')
 		{
-			char* idStr,* fdStr;
+			char* idStr = 0;
+			char* fdStr = 0;
 			bool pMark=false;
 			int x=0;
 			for(idStr=(++src);;src++)
@@ -5352,7 +5353,8 @@ void ExWriteStr(char*& bufferPos,char* str,bool useQuote)
 				else if (*src==NULL)
 					return;
 			}
-			WriteExDataNum(bufferPos,idStr,fdStr,pMark);
+			if (idStr && fdStr)
+				WriteExDataNum(bufferPos,idStr,fdStr,pMark);
 		}
 		else if (*src=='\r')
 		{
