@@ -1,0 +1,11 @@
+*.sdf
+*.opensdf
+*.log
+*.pdb
+*.ilk
+*.ipch
+*.suo
+*.w3x
+*.lib
+/tmp
+bin/Debug/Wc3MapMax++.exe
