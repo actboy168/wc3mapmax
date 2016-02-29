@@ -37,7 +37,12 @@ BOOL Cmd_Main(PSTR szCmdLine, PUINT32 pnRet)
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine, int iCmdShow)
 {
-    getcwd(szAppDir, MAX_PATH);
+	GetModuleFileNameA(NULL, szAppDir, MAX_PATH);
+	PathRemoveBlanksA(szAppDir);
+	PathUnquoteSpacesA(szAppDir);
+	PathRemoveBackslashA(szAppDir);
+	PathRemoveFileSpecA(szAppDir);
+    //getcwd(szAppDir, MAX_PATH);
     chdir(szAppDir);
 
     UINT32 nRet;
