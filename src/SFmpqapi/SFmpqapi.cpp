@@ -3558,7 +3558,7 @@ DWORD HashString(LPCSTR lpszString, DWORD dwHashType)
 		while (strchr(lpszString,'\\')!=NULL) lpszString = strchr(lpszString,'\\')+1;
     while (*lpszString != 0)
     {
-        ch = toupper(*lpszString++);
+        ch = toupper((int)(unsigned char)*lpszString++);
 
         seed1 = dwCryptTable[(dwHashType << 8) + ch] ^ (seed1 + seed2);
         seed2 = ch + seed1 + seed2 + (seed2 << 5) + 3;
