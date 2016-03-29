@@ -4619,7 +4619,7 @@ void SearchFilesInJ(char* buffer)
 		{
 			if (buffer[1]=='/')
 			{
-				for(buffer+=2;*buffer!='\n' && *buffer!='\r';buffer++)
+				for (buffer += 2; *buffer != '\0' && *buffer != '\n' && *buffer != '\r'; buffer++)
 					;
 			}
 		}
@@ -5044,6 +5044,11 @@ void InitOriginLevel()
 void WriteFilesToMap(char* mapName)
 {
 	HANDLE destMPQ=MpqOpenArchiveForUpdate(mapName, MOAU_CREATE_ALWAYS, hashTableSize);
+	if (destMPQ == (HANDLE)-1)
+	{
+		MessageBox(NULL, TEXT("´ò¿ªµØÍ¼Ê§°Ü!"), TEXT("Wc3MapMax++"), 0);
+		return;
+	}
 	MpqCloseUpdatedArchive(destMPQ,NULL);
 	int fp=open(mapName,O_BINARY|O_RDWR);
 	int size=filelength(fp);
