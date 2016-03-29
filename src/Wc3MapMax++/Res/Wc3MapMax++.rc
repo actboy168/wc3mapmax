@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(中华人民共和国) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-#ifdef _WIN32
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 #pragma code_page(936)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -87,20 +85,20 @@ EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
 CAPTION "Wc3MapMax++ v1.3.8"
 FONT 9, "宋体", 0, 0, 0x1
 BEGIN
-    LTEXT           "单位",     IDC_STATIC, 25,  25, 24, 11
-    LTEXT           "物品",     IDC_STATIC, 25,  40, 24, 11
-    LTEXT           "可破坏物", IDC_STATIC, 17,  55, 32, 11
-    LTEXT           "装饰物",   IDC_STATIC, 21,  70, 28, 11
-    LTEXT           "技能",     IDC_STATIC, 25,  85, 24, 11
-    LTEXT           "特效",     IDC_STATIC, 25, 100, 24, 11
-    LTEXT           "科技",     IDC_STATIC, 25, 115, 24, 11
-    COMBOBOX        IDC_COMBO_UNIT, 57,  22, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_ITEM, 57,  37, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_DEST, 57,  52, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_DOOD, 57,  67, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_ABIL, 57,  82, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_BUFF, 57,  97, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX        IDC_COMBO_UPGR, 57, 112, 55, 43, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "单位",IDC_STATIC,25,25,24,11
+    LTEXT           "物品",IDC_STATIC,25,40,24,11
+    LTEXT           "可破坏物",IDC_STATIC,17,55,32,11
+    LTEXT           "装饰物",IDC_STATIC,21,70,28,11
+    LTEXT           "技能",IDC_STATIC,25,85,24,11
+    LTEXT           "特效",IDC_STATIC,25,100,24,11
+    LTEXT           "科技",IDC_STATIC,25,115,24,11
+    COMBOBOX        IDC_COMBO_UNIT,57,22,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ITEM,57,37,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DEST,57,52,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DOOD,57,67,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ABIL,57,82,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BUFF,57,97,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_UPGR,57,112,55,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     LTEXT           "搜索等级",IDC_STATIC_SEARCH_LEVEL,133,26,33,12,SS_NOTIFY
     COMBOBOX        IDC_COMBO_SEARCH_LEVEL,168,23,23,37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     CONTROL         "搜索.j脚本",IDC_CHECK_SEARCH_OBJECT_IN_JSCRIPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,39,58,14
@@ -126,22 +124,21 @@ BEGIN
     CONTROL         "Wav最佳优化",IDC_CHECK_WAV_AUTO_BLOCKSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,102,158,64,12
     CONTROL         "仅重压缩地图",IDC_CHECK_ONLY_FOR_COMPRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,158,67,12
     LTEXT           "",IDC_STATIC_BOTTON_TEXT,14,196,113,8
-    
-    GROUPBOX        "Extra优化",IDC_EXT,                                                         203,   8, 108, 145
-    CONTROL         "Doo优化",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                  209,  21,  50,  12
-    LTEXT           "小数精确位",IDC_STATIC_DOO_NUM,                                             217,  34,  41,  12,SS_NOTIFY
-    EDITTEXT        IDC_EDIT_DOO_CONV_DIGITS_NUM,                                                259,  32,  21,  12,ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT           "标志字符",IDC_STATIC_DOO_MARK,                                              217,  47,  35,  12,SS_NOTIFY
-    EDITTEXT        IDC_EDIT_DOO_MARK_STRING,                                                    259,  45,  45,  12,ES_AUTOHSCROLL
-    CONTROL         "WTS优化",IDC_CHECK_WTS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP, 209,  60,  45,  12
-    CONTROL         "删除WE关联文件",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,           209,  73,  84,  12
-    CONTROL         "保留listfile文件",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,         209,  86,  84,  12
-    CONTROL         "Blp优化",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                 209,  99,  40,  12
-    COMBOBOX        IDC_COMBO10,                                                                 259,  99,  38,  37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP 
-    CONTROL         "优化J文件",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,               209, 112,  50,  12
-    CONTROL         "Mdx压缩",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,                 209, 125,  44,  12
-    LTEXT           "外部listfile",IDC_STATIC_EXLISTFILE,                                        209, 138,  51,  12,SS_NOTIFY
-    PUSHBUTTON      "未设置",IDC_BUTTON_LIST_FILE,                                               266, 133,  38,  14
+    GROUPBOX        "Extra优化",IDC_EXT,203,8,108,145
+    CONTROL         "Doo优化",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,21,50,12
+    LTEXT           "小数精确位",IDC_STATIC_DOO_NUM,217,34,41,12,SS_NOTIFY
+    EDITTEXT        IDC_EDIT_DOO_CONV_DIGITS_NUM,259,32,21,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "标志字符",IDC_STATIC_DOO_MARK,217,47,35,12,SS_NOTIFY
+    EDITTEXT        IDC_EDIT_DOO_MARK_STRING,259,45,45,12,ES_AUTOHSCROLL
+    CONTROL         "WTS优化",IDC_CHECK_WTS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,209,60,45,12
+    CONTROL         "删除WE关联文件",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,73,84,12
+    CONTROL         "保留listfile文件",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,86,84,12
+    CONTROL         "Blp优化",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,99,40,12
+    COMBOBOX        IDC_COMBO10,259,99,38,37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "优化J文件",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,112,50,12
+    CONTROL         "Mdx压缩",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,209,125,44,12
+    LTEXT           "外部listfile",IDC_STATIC_EXLISTFILE,209,138,51,12,SS_NOTIFY
+    PUSHBUTTON      "未设置",IDC_BUTTON_LIST_FILE,266,133,38,14
 END
 
 
@@ -151,8 +148,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,3,8,0
- PRODUCTVERSION 1,3,8,0
+ FILEVERSION 1,3,11,0
+ PRODUCTVERSION 1,3,11,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -170,12 +167,12 @@ BEGIN
             VALUE "Comments", "魔兽地图优化工具"
             VALUE "CompanyName", "by Red_Wolf"
             VALUE "FileDescription", "魔兽地图优化工具"
-            VALUE "FileVersion", "1.3.8"
+            VALUE "FileVersion", "1.3.11.0"
             VALUE "InternalName", "Wc3MapMax++.exe"
             VALUE "LegalCopyright", "by Red_Wolf"
             VALUE "OriginalFilename", "Wc3MapMax++.exe"
             VALUE "ProductName", "Wc3MapMax++"
-            VALUE "ProductVersion", "1.3.8"
+            VALUE "ProductVersion", "1.3.11.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -191,7 +188,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -243,12 +240,12 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "关于 Wc3MapMax++(&A)..."
 END
 
-#endif    // 中文(中华人民共和国) resources
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

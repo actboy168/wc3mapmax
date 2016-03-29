@@ -116,6 +116,7 @@
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>$(SolutionDir)/../lib/$(Configuration)/SFmpqlib.lib</AdditionalDependencies>
+      <AdditionalOptions> /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -149,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Res\Wc3MapMax++.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Wc3MapMax++.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

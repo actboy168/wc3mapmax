@@ -86,4 +86,9 @@
       <Filter>Res</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Wc3MapMax++.ico">
+      <Filter>Res</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

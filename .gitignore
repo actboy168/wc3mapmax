@@ -9,3 +9,5 @@
 *.lib
 /tmp
 bin/Debug/Wc3MapMax++.exe
+bin/Debug/(listfile)
+bin/Release/
