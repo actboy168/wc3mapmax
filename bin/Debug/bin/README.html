@@ -6,7 +6,7 @@ table{ background-color:#ffffff; border:1px solid #666666 }
 </style>
 <pre>****************************************
 *                                      *
-*  Wc3 Text File Optimizer 4.9         *
+*  Wc3 Text File Optimizer 5.0         *
 *                                      *
 ****************************************</pre>
 
@@ -206,11 +206,11 @@ But someone made a tool that reconstructed the war3map.wtg from the map&apos;s s
   <p>Tested Map : Vexorian Hero Arena 0.507 (not released yet)
 
 <br><br><right><table border="1">
-<tr><td></td><td><b>Map Size </b></td><td><b>Loading Time </b></td></tr>
+<tr><td></td><td><b>Map Sizeï¿½</b></td><td><b>Loading Timeï¿½</b></td></tr>
 <tr><td>Original File</td><td><p align="right">1227 KB</p></td><td>2 min 32.45 sec</td></tr>
 <tr><td>Map Optimizer</td><td><p align="right">655 KB</p></td><td>2 min 17.24 sec</td></tr>
 <tr><td><a href="http://www.wc3campaigns.net/thread_view.php?t=73504" target="_blank">Widgetizer</a></td><td><p align="right">1142 KB</p></td><td>1 min 13.68 sec</td></tr>
-<tr><td><a href="http://www.wc3campaigns.net/thread_view.php?t=73504" target="_blank">Widgetizer</a>+Optimizer </td><td><p align="right">888 KB</p></td><td>1 min 11.25 sec</td></tr></table></right>
+<tr><td><a href="http://www.wc3campaigns.net/thread_view.php?t=73504" target="_blank">Widgetizer</a>+Optimizerï¿½</td><td><p align="right">888 KB</p></td><td>1 min 11.25 sec</td></tr></table></right>
 
      <p>Granted <a href="http://www.wc3campaigns.net/thread_view.php?t=73504" target="_blank">Widgetizer</a> and Optimizer make a great synergy with a 339KB reduction and 81.2 less loading time seconds.
 
@@ -384,7 +384,7 @@ But someone made a tool that reconstructed the war3map.wtg from the map&apos;s s
 
  <a name="cth"></a><h2>Credits and special thanks</h2>
 
- <p>Program Author: Vexorian (Víctor Hugo Solíz Kúncar)<br>
+ <p>Program Author: Vexorian (Vï¿½ctor Hugo Solï¿½z Kï¿½ncar)<br>
  Uses the wonderful SFMPQ.DLL Library by ShadowFlare
 
  <p>Special thanks to:
@@ -413,6 +413,15 @@ But someone made a tool that reconstructed the war3map.wtg from the map&apos;s s
  <p><h2>Version History</h2>
 
 <a name="his"></a><pre>
+5.0:
+- Fixed a bug that caused an arbitrary mod limit in the object optimizer.
+- The optimizer will no longer ignore the tweak to disable BJ optimize (BTW, 
+  This script tends to be the root of all "map does not work" bugs, so it is a good
+  thing that it is possible to disable it again).
+- Fixed a bug that made map scripts with native declarations fail after the short names
+  obfuscation executes.
+
+
 4.9:
 - Theorically fixed a patch 1.24-related bug that could make some few GUI maps incompatible with patch 1.24.
 
@@ -509,7 +518,7 @@ But someone made a tool that reconstructed the war3map.wtg from the map&apos;s s
  - &quot;Make sure to clean every unused function/variable&quot; Is now way faster than before.
  - &quot;Shortest variable/function names possible&quot; Will no longer automatically consider names of real variables as possible
    identifier names to be used as strings. To make it consider real variables for strings,  a new option called 
-   &quot;Script uses real variable value events&quot; has been added·
+   &quot;Script uses real variable value events&quot; has been addedï¿½
  - Fixed a chance the optimizer had to not add one file to the new map under certain circunstances.
  - &apos;Remove useless code&apos; now also optimizes gamecache based systems that use an extra function to automatically setup
    their gamecache variables.
@@ -683,7 +692,7 @@ But someone made a tool that reconstructed the war3map.wtg from the map&apos;s s
  - Fixed a horrible bug that happened when a string finished with a carriage return in the JASS script, making the program to &apos;eat&apos; some of the remaining code.
  - There was a chance of odd I/O errors on certain maps, that was fixed.
  - Fixed a bug with the merge array initializations method.
- - Hopefully now works 100% allright with maps that use &apos;Foreign&apos; characters. The only way to test this I had was the Ñ I had from spanish, but it should work with the other languages.
+ - Hopefully now works 100% allright with maps that use &apos;Foreign&apos; characters. The only way to test this I had was the ï¿½ I had from spanish, but it should work with the other languages.
 
  - Added AUTODETECT to the buffer size level option, and fixed a bug with it, (it wasn&apos;t actually using the values you wanted).
  - Merged the Constant function purge method with the remove useless code method.
