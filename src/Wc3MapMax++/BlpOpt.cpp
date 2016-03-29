@@ -84,9 +84,11 @@ int BlpOpt(char* buffer, int fileSize, char mipNum)
       minOffset = minOffset + BlpHeader->nSize[i];
     }
     else
-    {
-      BlpHeader->nOffset[i] = 0;
-      BlpHeader->nSize[i]   = 0;
+	{
+		//BlpHeader->nOffset[i] = 0;
+		//BlpHeader->nSize[i] = 0;
+		BlpHeader->nOffset[i] = BlpHeader->nOffset[i - 1];
+		BlpHeader->nSize[i] = BlpHeader->nSize[i - 1];
     }
   }
 
