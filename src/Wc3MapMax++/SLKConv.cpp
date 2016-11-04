@@ -4858,7 +4858,7 @@ BOOL ListMapFile(char* mapName)
 	if (mapName==NULL || *mapName==NULL)
 		return FALSE;
 	SFileOpenArchive(mapName,0,0,&g_hMPQ);
-	if (g_hMPQ<=0)
+	if ((int)g_hMPQ<=0)
 		return FALSE;
 
 	int hashTableSize = ((MPQARCHIVE*)g_hMPQ)->MpqHeader.dwHashTableSize;
