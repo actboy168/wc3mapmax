@@ -387,7 +387,10 @@ struct BLOCKTABLEENTRY {
 struct HASHTABLEENTRY {
 	DWORD dwNameHashA; // First name hash of file
 	DWORD dwNameHashB; // Second name hash of file
-	LCID lcLocale; // Locale ID of file
+	USHORT lcLocale;
+	BYTE   Platform;
+	BYTE   Reserved;
+
 	DWORD dwBlockTableIndex; // Index to the block table entry for the file
 };
 

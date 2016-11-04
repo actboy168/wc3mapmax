@@ -48,7 +48,7 @@ SFMPQLIBMODULE::~SFMPQLIBMODULE()
 
 #endif
 
-LCID LocaleID = 0;
+USHORT LocaleID = 0;
 BOOL SFMpqInit = FALSE;
 HINSTANCE hStorm = 0;
 #ifdef _USRDLL
@@ -1970,6 +1970,8 @@ BOOL SFMPQAPI WINAPI MpqAddFileToArchiveEx(MPQHANDLE hMPQ, LPCSTR lpSourceFileNa
 		hashEntry->dwNameHashA = HashString(lpDestFileName,HASH_NAME_A);
 		hashEntry->dwNameHashB = HashString(lpDestFileName,HASH_NAME_B);
 		hashEntry->lcLocale = LocaleID;
+		hashEntry->Platform = 0;
+		hashEntry->Reserved = 0xFF;
 		hashEntry->dwBlockTableIndex = BlockIndex;
 		mpqOpenArc->lpBlockTable[BlockIndex].dwFileOffset = 0;
 
@@ -2314,8 +2316,10 @@ BOOL SFMPQAPI WINAPI MpqAddFileFromBufferEx(MPQHANDLE hMPQ, LPVOID lpBuffer, DWO
 	if ((hashEntry->dwBlockTableIndex&0xFFFFFFFE)==0xFFFFFFFE)
 	{
 		hashEntry->dwNameHashA = HashString(lpFileName,HASH_NAME_A);
-		hashEntry->dwNameHashB = HashString(lpFileName,HASH_NAME_B);
+		hashEntry->dwNameHashB = HashString(lpFileName, HASH_NAME_B);
 		hashEntry->lcLocale = LocaleID;
+		hashEntry->Platform = 0;
+		hashEntry->Reserved = 0xFF;
 		hashEntry->dwBlockTableIndex = BlockIndex;
 		mpqOpenArc->lpBlockTable[BlockIndex].dwFileOffset = 0;
 	}
